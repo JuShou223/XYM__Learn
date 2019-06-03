@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>贪吃蛇</title>
+  <style>
+    #gameCanvas {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    #score {
+      text-align: center;
+      font-size: 70px;
+      font-family: serif;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="score">0</div>
+  <canvas id="gameCanvas" width="300" height="300"></canvaus>
+    <script>
+      let dx = 10, dy = 0;
+      let fx, fy;
+      let nx, ny;
+      let score = 0;
+      let flag=1;
+      nx = Math.floor(Math.random() * 30) + 1;
+      ny = Math.floor(Math.random() * 30) + 1;
+      let GAME_SPEED = 100;
+      const SCORE = document.getElementById("score");
+      function main() {
+        setTimeout(() => {
+          clearCanvas();
+          advanceSnake();
+          drawSnake();
+          drawFood();
+          kill();
+          if (snake[0].x === (fx - 5) && snake[0].y === (fy - 5)) {
+            score += 1;
+            SCORE.innerHTML = score;
+            if(score%5===0){
+              GAME_SPEED-=10;
+            }
+            randomFood();
+          }
+          if (snake[0].x >= 0 && snake[0].x < 300 && snake[0].y >= 0 && snake[0].y < 300 && flag===1) {  
+            // console.log(flag);
+            main();
+          } else {
+            SCORE.innerHTML = "GAME OVER";
+            return;
+          }
+          console.log(GAME_SPEED);
+        }, GAME_SPEED);
+      }
+      main();
+      
+      // snake可以长胖 push 
+      // snake可以判断边界
+      let snake = [
+        { x: 150, y: 150 },
+        { x: 140, y: 150 },
+        { x: 130, y: 150 },
+        { x: 120, y: 150 },
+        { x: 110, y: 150 },
+      ];
+      const gameCanvas = document.getElementById('gameCanvas');
+      // 绘制上下文环境
+      const ctx = gameCanvas.getContext('2d');
+      // setInterval(()=>{clearCanvas();advanceSnake();drawSnake();},100) 
+      function clearCanvas() {
+        ctx.fillStyle = 'white';
+        ctx.strokeStyle = 'black';
+        ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+        ctx.strokeRect(0, 0, gameCanvas.width, gameCanvas.height);
+      }
+      // 蛇？ 身子是几个rect 位置 坐标
+      // 初始绘制蛇
+      function drawSnake() {
+        snake.forEach(drawSnakePart);
+      }
+      function drawSnakePart(part) {
+
+        ctx.fillStyle = 'lightgreen';
+        ctx.strokeStyle = 'darkgreen';
+        ctx.fillRect(part.x, part.y, 10, 10);
+        ctx.strokeRect(part.x, part.y, 10, 10);
+      }
+      function drawFood() {
+        fx = 5 + (10 * (nx - 1));
+        fy = 5 + (10 * (ny - 1));
+        // console.log(fx, fy);
+        ctx.fillStyle = 'red';
+        ctx.strokeStyle = 'darkred';
+        ctx.beginPath();
+        ctx.arc(fx, fy, 5, 360, Math.PI * 2, true);
+        ctx.fill();
+        ctx.stroke();
+      }
+      function randomFood() {
+        nx = Math.floor(Math.random() * 30) + 1;
+        ny = Math.floor(Math.random() * 30) + 1;
+      }
+      function advanceSnake() {
+        // canvaus 上一帧的基础上
+        // 最前面加一个，最后一个移除
+        const head = { x: snake[0].x + dx, y: snake[0].y + dy };
+        snake.unshift(head);
+        if (snake[0].x != (fx - 5) || snake[0].y != (fy - 5)) {
+          snake.pop();
+        }
+      }
+      function changeDirection(event) {
+        const LEFT_KEY = 37;
+        const RIGHT_KEY = 39;
+        const UP_KEY = 38;
+        const DOWN_KEY = 40;
+        const keyPressed = event.keyCode;
+        const goingRight = dx === 10;
+        const goingLeft = dx === -10;
+        const goingUp = dy === -10;
+        const goingDown = dy === 10;
+        if (keyPressed === LEFT_KEY && !goingRight) {
+          dx = -10;
+          dy = 0;
+        } else if (keyPressed === UP_KEY && !goingDown) {
+          dx = 0;
+          dy = -10;
+        } else if (keyPressed === RIGHT_KEY && !goingLeft) {
+          dx = 10;
+          dy = 0;
+        } else if (keyPressed === DOWN_KEY && !goingUp) {
+          dx = 0;
+          dy = 10;
+        }
+      }
+      function kill(){
+        for(let i=1;i<snake.length;i++){
+          if(snake[0].x===snake[i].x && snake[0].y===snake[i].y){
+            flag=0;
+          }
+        }
+      }
+      document.addEventListener('keydown', changeDirection);
+    </script>
+    </div>
+</body>
+
+</html>

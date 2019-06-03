@@ -1,0 +1,253 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html,body{
+  font-size: 20px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.w_container{
+  width: 100%;
+  height: 100%;
+  
+}
+.w_head{
+  width: 100%;
+  background-image: linear-gradient(to bottom, 
+  #48a6fd, 
+  #2589e8 );
+  height: 25%;
+  padding-top: 10px;
+}
+.w_body{
+  width: 100%;
+  height: 75%;
+  background-color: #f5fafe;
+}
+.w_title{
+  font-size: 20px;
+  text-align: center;
+  color: #fff;
+}
+.w_info{
+  margin-top: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.w_avatar{
+  margin-left: 5%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+
+}
+.w_avatar img{
+  width: 100%;
+}
+.w_detail{
+ display: inline-block;
+ width: 160px;
+ height: 100%;
+ overflow: hidden;
+}
+.w_name{
+  margin-left: 5px;
+  width: 80px;
+  font-size: 18px;
+  color: #ffffff;
+}
+.w_vip{
+  width: 150px;
+  height: 45%;
+}
+.w_vip .w_vip1{
+  width: 82px;
+  background-color: #fff;
+  border-radius: 15px;
+  text-align: center;
+  color: #999999;
+  position: relative;
+  font-size: 14px;
+  display: inline-block;
+}
+.w_vip .w_vip1 img{
+  width: 17px;
+  height: 13px;
+}
+.w_vip .w_vip2{
+  width: 60px;
+  font-size: 13px;
+  text-align: center;
+  display: inline-block;
+  color:  #ffdd00;
+}
+.w_card{
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  bottom: 25px;
+  margin-right: 5%;
+  color: #fff;
+  opacity: 0.8;
+}
+.w_content{
+  position: absolute;
+  top: 25%;
+  width: 90%;
+  margin-left: 5%;
+  border-radius: 5px;
+  background: #ffffff;
+  /* overflow: hidden; */
+}
+.w_content.w_c1{
+  height: 13%;
+  position: absolute;
+  top: 19%;
+  overflow: hidden;
+}
+.w_content.w_c2{
+  height: 26%;
+  position: absolute;
+  top: 34%;
+  overflow: hidden;
+  font-size: 0;
+}
+.w_content.w_c3{
+  height: 15%;
+  position: absolute;
+  top: 62%;
+  overflow: hidden;
+
+}
+.w_count,.w_candy,.w_coin{
+  overflow: hidden;
+  display: inline-block;
+  width: 28%;
+  height: 100%;
+
+}
+.w_bl{
+  display: inline-block;
+  height: 30px;
+  border-right: 1px solid #e1e1e1;
+  margin-bottom: 30px;
+}
+.w_count{
+  margin-left: 4%;
+}
+.w_num{
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  line-height: 56px;
+  font-weight: bold;
+}
+.w_cn{
+  width: 100%;
+  height: 50%;
+  text-align: center;
+  line-height: 40px;
+  color: #5d5d5d;
+  font-size: 16px;
+}
+.w_func1,.w_func2,.w_func3,.w_func4,.w_func5,.w_func6{
+  width: 30%;
+  height: 50%;
+  display: inline-block;
+  /* border: 1px solid #000; */
+  overflow: hidden;
+}
+.w_func1,.w_func4{
+  margin-left: 5%;
+}
+.w_func_pic{
+  width: 35px;
+  height: 35px;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+.w_func1 .w_func_pic.w_pic1{
+  background: url(./leida.png) no-repeat;
+  background-size: 100%;
+}
+.w_func2 .w_func_pic.w_pic2{
+  background: url(./tutorial.png) no-repeat;
+  background-size: 100%;
+}
+.w_func3 .w_func_pic.w_pic3{
+  background: url(./customer.png) no-repeat;
+  background-size: 100%;
+}
+.w_func4 .w_func_pic.w_pic4{
+  background: url(./find-group.png) no-repeat;
+  background-size: 100%;
+}
+.w_func5 .w_func_pic.w_pic5{
+  background: url(./edit.png) no-repeat;
+  background-size: 100%;
+}
+.w_func6 .w_func_pic.w_pic6{
+  background: url(./suggest.png) no-repeat;
+  background-size: 100%;
+}
+.w_fn{
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5px;
+  color: #5d5d5d;
+}
+.w_group_pic{
+  width: 70px;
+  height: 70px;
+  background: url(./superMe.png) no-repeat;
+  background-size: 100%;
+  margin-top: 15px;
+  margin-left: 15px;
+  display: inline-block;
+}
+.w_group_info{
+  display: inline-block;
+  width: 40%;
+  overflow: hidden;
+}
+.w_group_info .w_group_info1{
+  height: 35px;
+  font-size: 15px;
+  line-height: 45px;
+}
+.w_group_info .w_group_info2{
+  height: 35px;
+  font-size: 13px;
+  line-height: 24px;
+  color: #5d5d5d;
+}
+.w_group_btn{
+  width: 30%;
+  display: inline-block;
+  overflow: hidden;
+  height: 70px;
+}
+.w_group_btn .w_group_btn1{
+  font-size: 13px;
+  width: 70%;
+  height: 25px;
+  background-color: #3f97ff;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 17.5px;
+  margin: 0 auto;
+  margin-top: 22.5px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+.tab{
+  display: none;
+}
+.tab.show{
+  display: block;
+}

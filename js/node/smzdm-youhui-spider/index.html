@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="lists">
+  </div>
+  <!-- html entity -->
+  <!-- space -->
+  &nbsp;
+  <script>
+    let arr = [1,2,3,4]
+    // 返回 原数组扩大两倍
+    // 扩展 字符串
+    Array.prototype.double=function(){
+      return this.map(e=>2*e)
+    }
+    let newArr=arr.double()
+    console.log(newArr)
+    const promise = new Promise((resolve,reject)=>{
+      setTimeout(() => {
+        reject('err')
+      }, 3000);
+    })
+    promise.then(res=>{
+      console.log(res);
+    }).catch(err=>{
+      // 上报
+      console.log('报错',err)
+    })
+    
+    try{
+      const lists= document.getElementById('list');
+      lists.style.width='10px'
+    }catch(err){
+      console.log(err)
+    }
+    
+    console.log('正确的代码')
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.container,.page{
+    position: absolute;
+    left: 0;top: 0;right: 0;bottom: 0;
+
+}
+.page__bd{
+    height: 100%;
+    background-color: white;
+    overflow-y: auto;
+}
+.tab{
+    display: none;
+}
+.tab.show{
+    display: block;
+}
+.mine-title{
+    text-align: center;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+.weui-cell__hd{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.weui-tab__panel{
+    background-color: #f3faff;
+}
+.showGoods{
+    display: block;
+}
+.showGoods .goods{
+    display: flex;
+}
+.showGoods .goods .goods-1{
+    flex: 1;
+    margin: 20px 0 0 20px;
+}
+.showGoods .goods .goods-2{
+    flex: 1;
+    margin: 20px 20px 0 20px;
+}

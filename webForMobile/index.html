@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>一个涉及微信支付的页面</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.bootcss.com/weui/1.1.3/style/weui.css" rel="stylesheet">
+
+</head>
+<body>
+   <div class="page">
+    <div class="page__hd">
+        <div class="title">vip</div>
+        <div class="price">
+          <div class="weui-flex">
+            <div class="weui-flex__item">
+              <div class="placeholder">
+                <div class="item-price">
+                  <p class="item-price__month">1个月</p>
+                  <p class="item-price__old">原价19.9元</p>
+                  <p class="item-price__new">现价9元</p>
+                </div>
+              </div>
+            </div>
+            <div class="weui-flex__item mar"><div class="placeholder">
+                <div class="item-price">
+                    <p class="item-price__month">1个月</p>
+                    <p class="item-price__old">原价19.9元</p>
+                    <p class="item-price__new">现价9元</p>
+                  </div>
+            </div></div>
+            <div class="weui-flex__item"><div class="placeholder">
+                <div class="item-price">
+                    <p class="item-price__month">1个月</p>
+                    <p class="item-price__old">原价19.9元</p>
+                    <p class="item-price__new">现价9元</p>
+                  </div>
+            </div></div>
+          </div>
+        </div>
+    </div>
+
+   </div> 
+   <script>
+       var oType=document.querySelectorAll('.item-price');
+       for(let i=0;i<oType.length;i++){
+           oType[i].addEventListener('click',function(){
+               for(let j of oType){
+                   j.classList.remove('active')
+               }
+               this.classList.add('active')
+           })
+       }
+   </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    .content{
+      width: 389px;
+      height: 603px;
+      /* border: 1px solid black; */
+      background-color: #f8e4db;
+    }
+    .content .cat{
+      width: 132px;
+      height: 453px;
+      position: absolute;
+      top: 74px;
+      left: 117px;
+      /* border: 1px solid black; */
+    }
+    .content .cat .cat_body{
+      position: absolute;
+      top: 183px;
+      left: 15px;
+      background-image: url(./maoshenti.png);
+      background-repeat: no-repeat;
+      width: 117px;
+      height: 201px;
+    }
+    .content .cat .cat_wei{
+      position: absolute;
+      top: 0;left: 0;
+      background-image: url(./maowei.png);
+      background-repeat: no-repeat;
+      width: 64px;
+      height: 194px;
+      animation: ani_wei 3s linear infinite;
+      transform-origin: 38px 194px;
+      transition: .5s;
+    }
+    @keyframes ani_wei {
+        0% {
+        transform: rotateZ(0);
+        }
+        25%
+        {
+          transform: rotateZ(2deg);
+        }
+        50% {
+            transform: rotateZ(0deg);
+        }
+        75% {
+            transform: rotateZ(-2deg);
+        }
+         100% {
+        transform: rotateZ(0);
+        
+        }  
+      }  
+    .content .cat .cat_hand{
+      position: absolute;
+      top: 370px;left: 81px;
+      background-image: url(./maozhua.png);
+      background-repeat: no-repeat;
+      width: 35px;
+      height: 82px;
+      animation: ani_hand 3s linear infinite;
+      transform-origin: 30px 5px;
+      transition: .5s;
+    }
+    @keyframes ani_hand {
+        0% {
+        transform: rotateZ(0);
+        }
+        25% {
+            transform: rotateZ(2deg);
+        }
+        50% {
+            transform: rotateZ(0deg);
+        }
+        75% {
+            transform: rotateZ(-5deg);
+        }
+         100% {
+        transform: rotateZ(0);
+        
+        }  
+      }
+    .content .cat .cat_eye1{
+      position: absolute;
+      top: 362px;left: 93px;
+      background-image: url(./maoyan1.png);
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 5px;
+      animation: ani_eye 2s linear infinite;
+    } 
+    @keyframes ani_eye{
+      0%{
+        /* opacity: 1; */
+        transform: scaleY(1);
+      }
+      15%{
+        /* opacity: 0.5; */
+        transform: scaleY(0.5);
+      }
+      20%{
+        /* opacity: 0; */
+        transform: scaleY(0);
+      }
+      25%{
+        /* opacity: 0.5; */
+        transform: scaleY(0.5);
+      }
+      30%{
+        /* opacity: 1; */
+        transform: scaleY(1);
+      }
+      33%{
+        /* opacity: 0.5; */
+        transform: scaleY(0.5);
+      }
+      38%{
+        /* opacity: 0; */
+        transform: scaleY(0);
+      }
+      43%{
+        /* opacity: 0.5; */
+        transform: scaleY(0.5);
+      }
+      48%{
+        /* opacity: 1; */
+        transform: scaleY(1);
+      }
+      100%{
+        /* opacity: 1; */
+        transform: scaleY(1);
+      }
+    }
+    .content .cat .cat_eye2{
+      position: absolute;
+      top: 370px;left: 110px;
+      background-image: url(./maoyan2.png);
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 5px;
+      animation: ani_eye 2s linear infinite;
+    } 
+    .content .cat .cat_mouth{
+      position: absolute;
+      top: 374px;left: 97px;
+      background-image: url(./maozui.png);
+      background-repeat: no-repeat;
+      width: 5px;
+      height: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <div class="cat">
+      <div class="cat_wei"></div>
+      <div class="cat_hand"></div>
+      <div class="cat_body"></div>
+      <div class="cat_eye1"></div>
+      <div class="cat_eye2"></div>
+      <div class="cat_mouth"></div> 
+    </div>
+  </div>
+</body>
+</html>

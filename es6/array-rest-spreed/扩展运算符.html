@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  // ...
+  // 好比是 rest 的参数的逆运算
+  // 将一个数组打散
+  const arr=[18,19,20];
+  console.log(...arr);
+  const arr1=[0,1,2];
+  const arr2=[3,4,5];
+  const newarray=arr1.concat(arr2);
+  const spread_arr=[...arr1,...arr2];
+  const [aa,...rest_arr]=arr;
+  console.log(spread_arr);
+  const math_arr=[80,90,99];
+  console.log(...math_arr);
+  // Math.max(...math_arr);
+  // 求最大值
+  </script>
+  
+</body>
+</html>

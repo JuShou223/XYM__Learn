@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+    <input type="text" size="50" id="clock" />
+    <input type="button" value="Stop" id="btn" />
+    <input type="text" id="count" />
+  <script>
+    function clock() {
+      var time = new Date();
+      document.getElementById('clock').value = time;
+      var btn = document.getElementById('btn');
+      btn.onclick = function () {
+        clearInterval(t);
+      }
+    }
+    var t=setInterval(clock,1000);
+    var num = 100;
+function startCount(){
+    document.getElementById("count").value = num;
+    num -= 1;
+    setTimeout(startCount,1000);    //setTimeout是超时调用，使用递归模拟间歇调用
+}    
+setTimeout(startCount,1000);    //1s后执行
+    // var timeid = setTimeout(function(){
+    //   alert('hello');
+    // },2000);
+  </script>
+</body>
+
+</html>

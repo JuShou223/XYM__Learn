@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+  </div>
+  <script>
+    const like = 'https://b-gold-cdn.xitu.io/v3/static/img/zan-active.930baa2.svg'
+    const disLike = 'https://b-gold-cdn.xitu.io/v3/static/img/zan.e9d7698.svg'
+    let flag = false;
+    const container = document.querySelector('.container');
+    // ajax []
+    let defaultArr = [
+      { count: 80, flag: '0' },
+      { count: 90, flag: '1' },
+      { count: 1000, flag: '0' },
+    ]
+    const juejinlike = localStorage.getItem('juejinlike');
+    if (juejinlike) {
+      defaultArr = JSON.parse(juejinlike);
+    }
+    const htmlContentArr = defaultArr.map(function (likeItem, index) {
+      const { count, flag } = likeItem;
+      return `
+      <div class="item" data-flag="${flag}" data-index="${index}" data-click="able">
+       <img src="${flag === '0' ? disLike : like}" data-click="able" alt="" 
+       class="icon">
+       <span data-click="able" class="count ${flag === '0' ? '' : 'active'}">${count}</span>
+     </div>
+      `
+    });
+    // join();
+    container.innerHTML = htmlContentArr.join('');
+    // 事件部分
+    container.addEventListener('click', function (event) {
+      // 点哪个节点 event.target 就是谁
+      // console.log(event.target);
+      const clickAble = event.target.dataset.click;
+      if (clickAble) {
+        const itemContainer = event.target.dataset.flag ?
+          event.target : event.target.parentNode;
+        const img = itemContainer
+          .querySelector('img');
+        const count = itemContainer
+          .querySelector('.count');
+        let countNumber = count.innerHTML;
+        countNumber = parseInt(countNumber);
+        // data-flag
+        let flag = itemContainer.dataset.flag
+        // 点赞
+        if (flag === '0') {
+          countNumber += 1;
+          img.src = like;
+          count.classList.add('active');
+          flag = '1';
+        } else {
+          countNumber -= 1;
+          img.src = disLike;
+          count.classList.remove('active');
+          flag = '0';
+        }
+        // flag = !flag;
+        itemContainer.dataset.flag = flag;
+        count.innerHTML = countNumber;
+        let index = itemContainer.dataset.index;
+        index = parseInt(index);
+        defaultArr[index] = {
+          flag: flag,
+          count: countNumber
+        };
+        localStorage.setItem('juejinlike', JSON.stringify(defaultArr));
+      }
+    })
+    const items = document
+      .querySelectorAll('.item');
+    // version 2
+    // for (let i = 0; i < items.length; i++) {
+    //   items[i].addEventListener('click', function () {
+    //     const img = items[i]
+    //       .querySelector('img');
+    //     const count = items[i]
+    //       .querySelector('.count');
+    //     let countNumber = count.innerHTML;
+    //     countNumber = parseInt(countNumber);
+    //     // data-flag
+    //     let flag = items[i].dataset.flag
+    //     // 点赞
+    //     if (flag === '0') {
+    //       countNumber += 1;
+    //       img.src = like;
+    //       count.classList.add('active');
+    //       flag = '1';
+    //     } else {
+    //       countNumber -= 1;
+    //       img.src = disLike;
+    //       count.classList.remove('active');
+    //       flag = '0';
+    //     }
+    //     // flag = !flag;
+    //     items[i].dataset.flag = flag;
+    //     count.innerHTML = countNumber;
+    //   })
+    // }
+    // version 1
+    // const item = document
+    //   .querySelector('.item');
+
+    // item.addEventListener('click', function () {
+    //   const img = item
+    //     .querySelector('img');
+    //   const count = item
+    //     .querySelector('.count');
+    //   let countNumber = count.innerHTML;
+    //   countNumber = parseInt(countNumber);
+    //   // 点赞
+    //   if (!flag) {
+    //     countNumber += 1;
+    //     img.src = like;
+    //     count.classList.add('active');
+    //   } else {
+    //     countNumber -= 1;
+    //     img.src = disLike;
+    //     count.classList.remove('active');
+    //   }
+    //   flag = !flag;
+    //   count.innerHTML = countNumber;
+
+
+    // })
+  </script>
+</body>
+
+</html>

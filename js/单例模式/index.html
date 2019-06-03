@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function Model(html,show){
+      this.html=html;
+      this.show=show;
+    }
+    // 幂等 一个函数无论执行多少次结果都一样
+    // 特点：简单 
+    // 缺点：破坏了传统的 生成实例的方法 new() , 破坏开发者的习惯 ，需要调用 getInstance() 
+    // 静态方法不需要new 即可调用
+    // 只生成一个实例
+    Model.getInstance=function(html,show){
+      if(!this.instance)
+      {
+        this.instance=new Model(html,show);
+      }
+      return this.instance;
+    }
+    Model.prototype.open=function(){
+      this.show=true;
+    }
+    Model.prototype.close=function(){
+      this.show=false;
+    }
+    // 首页
+    // 详情页也有弹窗
+    const model = Model.getInstance('<span>hello</span>',false);
+    const model2 =Model.getInstance('<span>world</span>',false);
+    console.log(model===model2);
+    // 解决实例过多的问题 弹窗应该是唯一的
+    // 单例模式 只生成一个实例
+
+  </script>
+</body>
+</html>

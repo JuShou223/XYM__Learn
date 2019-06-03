@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>网易云音乐年度总结</title>
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+  <link rel="stylesheet" href="./index.css">
+  <link rel="shortcut icon"
+  href="//s1.music.126.net/style/favicon.ico">
+</head>
+<body>
+  <!-- <audio src="./bgm.mp3" id="bgm"
+  ></audio> -->
+  <div class="music-btn off"></div>
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        slide-1
+      </div>
+      <div class="swiper-slide">
+        <div class="view special">
+          <!-- 荡秋千 -->
+          <div class="art">
+            <div class="swing">
+              <!-- 腿 -->
+              <div class="leg2">
+                <div class="jiojio"></div>
+              </div>
+              <!-- 腿 -->
+              <div class="leg1">
+                <div class="jiojio"></div>
+              </div>
+              <!-- 脖子 -->
+              <div class="neck"></div>
+              <div class="head">
+                <div class="part"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <div class="view favorite">
+          <div class="id18_juian j-juanAni2 z-juanAni2"></div>
+        </div>
+      </div>
+      <div class="swiper-slide">
+          <div class="view special">
+              <div class="m-page m-page-14 f-page z-enter">
+                  <div class="bg f-page"></div>
+                  <div class="art j-art14" style="transform: scale(0.510667);">
+                   <div class="lines"></div>
+                   <div class="manwrap">
+                    <div class="shoubi"></div>
+                    <div class="man"></div>
+                    <div class="tou"></div>
+                   </div>
+                   <div class="notes"></div>
+                  </div>
+                  <div class="content">
+                   <h4 class="tt para f-animLineUp" style="transition-delay: 0.2s;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018年，这些是TA最爱的歌</font></font></h4>
+                   <div class="paras">
+                    <p class="para f-animLineUp" style="transition-delay: 0.3s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“梦中的婚礼</font></font></span></p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.4s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“鬼迷心窍</font></font></span></p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.5s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“我的心太乱</font></font></span></p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.6s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“夕阳之歌（直播）</font></font></span></p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.7s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“快乐无罪</font></font></span></p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.8s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“荡漾</font></font></span></p>
+                    <p class="para f-animLineUp" style="transition-delay: 0.9s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“千と千寻の神隠し：いつも何度でも</font></font></span></p>
+                    <p class="para f-animLineUp" style="transition-delay: 1s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“平凡之路</font></font></span></p>
+                    <p class="para f-animLineUp" style="transition-delay: 1.1s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“七月上</font></font></span></p>
+                    <p class="para f-animLineUp" style="transition-delay: 1.2s;"><span class="f-trunk"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">“梦想成真</font></font></span></p>
+                   </div>
+                  </div>
+                 </div> 
+                 <div class="open-text">
+                   <img src="//s5.music.126.net/static_public/5c21db8d4684556c72180904/open-text@3x.ff1b135ce9ab5bc79a945c8cf2ed6471.png">
+                 </div>
+                 <div class="m-btmbar"><div class="inner f-bd"><a href="javascript:;" class="btn"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">查看我的年度报告</font></font></a></div></div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+  <script>
+    const musicBtn = document
+    .querySelector('.music-btn');
+    const bgm = document.getElementById('bgm');
+    const paras = document.querySelector('.paras');
+    const id18_juian =document.querySelector('.id18_juian');
+    setTimeout(()=>{
+      id18_juian.classList.remove('z-juanAni2');
+      id18_juian.classList.add('z-juanAni2');
+    },3000)
+    let defautMusicPlay = true;
+    musicBtn.addEventListener('click', () => {
+      if (defautMusicPlay) {
+        bgm.play();
+        // musicBtn.classList.remove('off');
+      } else {
+        bgm.pause();
+        // musicBtn.classList.add('off');
+      }
+      defautMusicPlay = !defautMusicPlay;
+      // 切换
+      musicBtn.classList.toggle('off');
+      // bgm.play();
+      // bgm.pause();
+    })
+    const swiper = new Swiper('.swiper-container', {
+      direction: 'vertical',
+    })
+  </script>
+</body>
+</html>

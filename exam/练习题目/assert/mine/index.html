@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link href="https://cdn.bootcss.com/weui/1.1.3/style/weui.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+  <div class="w_container">
+    <div class="weui-tab__panel tab">1</div>
+    <div class="weui-tab__panel tab">2</div>
+    <div class="weui-tab__panel tab show">
+      <div class="w_head">
+        <div class="w_title">群无界</div>
+        <div class="w_info">
+          <div class="w_avatar">
+            <img src="http://pic.58pic.com/58pic/13/19/88/94C58PICIxZ_1024.jpg" alt="">
+          </div>
+          <div class="w_detail">
+            <div class="w_name">巨帅</div>
+            <div class="w_vip">
+              <div class="w_vip1"><img src="./crown1.png" alt="">普通会员</div>
+              <div class="w_vip2">点亮VIP》</div>
+            </div>
+          </div>
+          <div class="w_card">我的智能名片></div>
+        </div>
+
+      </div>
+
+      <div class="w_body"></div>
+      <div class="w_content w_c1">
+        <div class="w_count">
+          <div class="w_num" style="color: #48a6fd;">1265</div>
+          <div class="w_cn">余额</div>
+        </div>
+        <div class="w_bl"></div>
+        <div class="w_candy">
+          <div class="w_num" style="color: #f20000">2100</div>
+          <div class="w_cn">糖果</div>
+        </div>
+        <div class="w_bl"></div>
+        <div class="w_coin">
+          <div class="w_num" style="color: #ffa946">123</div>
+          <div class="w_cn">金币</div>
+        </div>
+      </div>
+      <div class="w_content w_c2">
+        <div class="w_func1">
+          <div class="w_func_pic w_pic1"></div>
+          <div class="w_fn">用户雷达</div>
+        </div>
+        <div class="w_func2">
+          <div class="w_func_pic w_pic2"></div>
+          <div class="w_fn">新手教程</div>
+        </div>
+        <div class="w_func3">
+          <div class="w_func_pic w_pic3"></div>
+          <div class="w_fn">联系客服</div>
+        </div>
+        <div class="w_func4">
+          <div class="w_func_pic w_pic4"></div>
+          <div class="w_fn">找回群主</div>
+        </div>
+        <div class="w_func5">
+          <div class="w_func_pic w_pic5"></div>
+          <div class="w_fn">软文智能编辑</div>
+        </div>
+        <div class="w_func6">
+          <div class="w_func_pic w_pic6"></div>
+          <div class="w_fn">意见反馈</div>
+        </div>
+      </div>
+      <div class="w_content w_c3">
+        <div class="w_group_pic"></div>
+        <div class="w_group_info">
+          <div class="w_group_info1">群无界超级体验群</div>
+          <div class="w_group_info2">功能体验，问题答疑</div>
+        </div>
+        <div class="w_group_btn">
+          <div class="w_group_btn1">点击群聊</div>
+        </div>
+      </div>
+    </div>
+    <div class="weui-tabbar" style="background-color: #fff;">
+      <a href="javascript:;" class="weui-tabbar__item">
+        <img src="./suggest.png" alt="" class="weui-tabbar__icon">
+        <p class="weui-tabbar__label">群无界</p>
+      </a>
+      <a href="javascript:;" class="weui-tabbar__item">
+        <span style="display: inline-block;position: relative;">
+          <img src="./edit.png" alt="" class="weui-tabbar__icon">
+          <span class="weui-badge weui-badge_dot" style="position: absolute;top: 0;right: -6px;"></span>
+        </span>
+        <p class="weui-tabbar__label">信息</p>
+      </a>
+      <a href="javascript:;" class="weui-tabbar__item weui-bar__item_on">
+        <img src="./customer.png" alt="" class="weui-tabbar__icon">
+        <p class="weui-tabbar__label">我的</p>
+      </a>
+    </div>
+  </div>
+  <script>
+    const choose = document.querySelectorAll('.weui-tabbar__item');
+    const tabs = document.querySelectorAll('.weui-tab__panel');
+    for (let i = 0; i < choose.length; i++) {
+      choose[i].addEventListener('click', function () {
+        showtab.call(this)
+      })
+    }
+    function showtab() {
+      for (let j = 0; j < tabs.length; j++) {
+        if (choose[j] === this) {
+          tabs[j].classList.add('show');
+          choose[j].classList.add('weui-bar__item_on');
+        }
+        else {
+          tabs[j].classList.remove('show');
+          choose[j].classList.remove('weui-bar__item_on');
+        }
+      }
+    }
+  </script>
+</body>
+
+</html>

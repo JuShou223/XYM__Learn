@@ -1,0 +1,341 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, #444, #999);
+}
+.container {
+  margin-top: 300px;
+  perspective: 1000px;
+}
+.shaizi {
+  width: 80px;
+  height: 80px;
+  position: relative;
+  margin: auto;
+  transform-style: preserve-3d;
+  transform: rotateY(-19deg) rotateX(57deg);
+}
+.ani {
+  animation: rotate 1s infinite;
+}
+.point {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: #e2dee5;
+  border: 1px solid #f1f0f6;
+}
+.point-1 .dian-1 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: radial-gradient(#b25a61, #941e23, #ae3535);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+}
+.dian {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: radial-gradient(#7d777a, #323235, #403a37);
+  position: absolute;
+}
+.point-1 {
+  transform: translateZ(40px);
+}
+.point-2 {
+  transform: rotateY(90deg) translateZ(40px);
+}
+.point-3 {
+  transform: rotateX(90deg) translateZ(40px);
+}
+.point-4 {
+  transform: rotateX(90deg) translateZ(-40px);
+}
+.point-5 {
+  transform: rotateY(90deg) translateZ(-40px);
+}
+.point-6 {
+  transform: translateZ(-40px);
+}
+.foot {
+  margin-top: 50px;
+  width: 100%;
+}
+.foot .btn {
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #262626;
+  opacity: 0.8;
+  margin: 0 auto;
+  cursor: pointer;
+}
+@-moz-keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  5% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  10% {
+    transform: rotateX(0) rotateY(0);
+  }
+  15% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  20% {
+    transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  30% {
+    transform: rotateX(0) rotateY(0);
+  }
+  35% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  40% {
+    transform: rotateX(0) rotateY(0);
+  }
+  45% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  50% {
+    transform: rotateX(0) rotateY(0);
+  }
+  55% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: rotateX(0) rotateY(0);
+  }
+  65% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  70% {
+    transform: rotateX(0) rotateY(0);
+  }
+  75% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  80% {
+    transform: rotateX(0) rotateY(0);
+  }
+  85% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  90% {
+    transform: rotateX(0) rotateY(0);
+  }
+  95% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  5% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  10% {
+    transform: rotateX(0) rotateY(0);
+  }
+  15% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  20% {
+    transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  30% {
+    transform: rotateX(0) rotateY(0);
+  }
+  35% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  40% {
+    transform: rotateX(0) rotateY(0);
+  }
+  45% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  50% {
+    transform: rotateX(0) rotateY(0);
+  }
+  55% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: rotateX(0) rotateY(0);
+  }
+  65% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  70% {
+    transform: rotateX(0) rotateY(0);
+  }
+  75% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  80% {
+    transform: rotateX(0) rotateY(0);
+  }
+  85% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  90% {
+    transform: rotateX(0) rotateY(0);
+  }
+  95% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@-o-keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  5% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  10% {
+    transform: rotateX(0) rotateY(0);
+  }
+  15% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  20% {
+    transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  30% {
+    transform: rotateX(0) rotateY(0);
+  }
+  35% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  40% {
+    transform: rotateX(0) rotateY(0);
+  }
+  45% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  50% {
+    transform: rotateX(0) rotateY(0);
+  }
+  55% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: rotateX(0) rotateY(0);
+  }
+  65% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  70% {
+    transform: rotateX(0) rotateY(0);
+  }
+  75% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  80% {
+    transform: rotateX(0) rotateY(0);
+  }
+  85% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  90% {
+    transform: rotateX(0) rotateY(0);
+  }
+  95% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotateX(0) rotateY(0);
+  }
+  5% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  10% {
+    transform: rotateX(0) rotateY(0);
+  }
+  15% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  20% {
+    transform: rotateX(0) rotateY(0);
+  }
+  25% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  30% {
+    transform: rotateX(0) rotateY(0);
+  }
+  35% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  40% {
+    transform: rotateX(0) rotateY(0);
+  }
+  45% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  50% {
+    transform: rotateX(0) rotateY(0);
+  }
+  55% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  60% {
+    transform: rotateX(0) rotateY(0);
+  }
+  65% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  70% {
+    transform: rotateX(0) rotateY(0);
+  }
+  75% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  80% {
+    transform: rotateX(0) rotateY(0);
+  }
+  85% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  90% {
+    transform: rotateX(0) rotateY(0);
+  }
+  95% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}

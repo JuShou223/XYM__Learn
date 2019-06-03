@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="div1"></div>
+  <script>
+    // 'use strict';
+    window.myName = 'abc';
+    var obj = {
+      myName: 'sven',
+      getNmae: function () {
+        return this.myName;
+      }
+    }
+    console.log(obj.getNmae());
+    var getNmae2 = obj.getNmae;
+    console.log(getNmae2);
+    //this丢失问题
+    console.log(getNmae2());
+    // var getId=function(id){
+    //   return document.getElementById(id);
+    // }
+    // console.log(getId('div1'));
+    // var getId=document.getElementById;
+    // console.log(getId);
+    // console.log(getId('div1'));
+    //闭包可以让函数运行是找到他定义是的变量
+    document.getElementById=(function(func){
+      //闭包的最佳手段
+      return function(){
+        return func.apply(document,arguments);
+      }
+    })(document.getElementById);
+    var getId=document.getElementById;
+    console.log(getId('div1'));
+  </script>
+</body>
+
+</html>

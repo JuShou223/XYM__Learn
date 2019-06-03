@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>星球大战-前端工程师是代码界的导演</title>
+    <style>
+     * {    
+         /* css 样式重置 */
+        margin: 0;
+        padding: 0;
+     }
+     /* 星球大战 茫茫宇宙 无助的孤独感 */
+     body{
+         /* 背景会平铺 */
+        background:url("./images/bg.jpg");
+        /* bgc#000 */
+        background-color: #000000;
+        
+     }
+     .starwars-demo{
+        height: 17em;
+        width: 34em;
+        /* background-color:red; */
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /* 变形属性 translate 移动 */
+        transform:translate(-50%,-50%);
+        transform-style: preserve-3d;
+        perspective: 800px;/*透视点 */
+     }
+     .star,.wars,.byline{
+         position: absolute;
+
+     }
+     .star{
+         top:-0.75em;
+         /* 3D动作，像飞船一样 */
+         animation: star 10s infinite;
+     }
+     @keyframes star{
+         0%{
+             opacity: 0;
+             transform: scale(1.5);   
+         }
+         20%{
+             opacity: 1;
+         }
+         89%{
+             opacity: 1;
+             transform: scale(1);
+         }
+         100%{
+             opacity: 0;
+             transform: translateZ(-400em);
+         }
+     }
+     .wars{
+         animation: wars 10s infinite;
+         bottom: -0.5em;
+
+     }
+     @keyframes wars{
+         0%{
+             opacity: 0;
+             transform: scale(1.5);
+         }
+         20%{
+             opacity: 1;
+         }
+         90%{
+             opacity: 1;
+             transform: scale(1);
+         }
+         100%{
+             opacity: 0;
+             transform: translateZ(-400em);
+         }
+     }
+     .byline{
+         color: #ffffff;
+         font-style: 2.25em;
+         left: -2em;
+         top: 29%;
+         letter-spacing: .4em;
+         /* 把文字变大（英文） */
+         text-transform: uppercase;
+
+     }
+     .byline span{
+         display: inline-block;
+         animation: spin-letters 10s infinite;
+     }
+     @keyframes spin-letters{
+        0%{
+             opacity: 0;
+             transform: rotateY(90deg);
+         }
+         30%{
+             opacity: 1;
+
+         }
+         70%,80%{
+             opacity: 1;
+             transform: rotateY(0deg);
+         }
+         100%{
+             opacity: 0;
+             transform:rotateY(90deg);
+         }
+     }
+    </style>
+</head>
+<body>
+    <!--.starwars-demo>img.star[src="./image/.svg"]*2+h2.byline>span*15-->
+      <div class="starwars-demo">
+         <!--'[]' 属性选择器-->
+       <img src="./images/star.svg" alt="" class="star">
+      <img src="./images/wars.svg" alt="" class="wars">
+       <h2 class="byline">
+        <span>T</span>
+        <span>h</span>
+        <span>e</span>
+        <span>F</span>
+        <span>o</span>
+        <span>r</span>
+        <span>c</span>
+        <span>e</span>
+        <span>A</span>
+        <span>w</span>
+        <span>a</span>
+        <span>k</span>
+        <span>e</span>
+        <span>n</span>
+        <span>s</span>
+       </h2>
+      </div>
+  
+</body>
+</html>

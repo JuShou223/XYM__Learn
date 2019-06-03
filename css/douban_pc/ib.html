@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>inline-block</title>
+  <style>
+    /* 
+     *auth xym
+     *date 2019-03-26
+     */
+     *{
+       margin: 0;padding: 0;
+     }
+    .box{
+      width: 950px;
+      margin: 0 auto;
+      font-size: 0;
+    }
+    .col-4,.col-8{
+      height: 200px;
+      background-color: green;
+      display: inline-block
+    } 
+    .col-4{
+      background-color: red;
+      width: 40%;
+    }
+    .col-8{
+      width: 60%;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="col-4"></div>
+    <div class="col-8"></div>
+    <div class="online">
+      <div class="mod">
+        <h2>
+          热门话题
+          <span class="pl">
+            &nbsp;(
+              <a href="#" target="_self">去话题广场</a>
+            )
+          </span>
+        </h2>
+        <ul>
+          <li class="rec_topics"><a href="#" class="rec_topics_name">寺庙里的猫</a><span class="rec_topics_subtitle">8613</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

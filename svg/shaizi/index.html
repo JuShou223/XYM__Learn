@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class="shaizi">
+			<div class="point point-1">
+				<div class="dian-1"></div>
+			</div>
+			<div class="point point-2">
+				<div class="dian" style="transform: translate(30px,13px)"></div>
+				<div class="dian" style="transform: translate(30px,46px)"></div>
+			</div>
+			<div class="point point-3">
+				<div class="dian" style="transform: translate(50px,10px)"></div>
+				<div class="dian" style="transform: translate(30px,30px)"></div>
+				<div class="dian" style="transform: translate(10px,50px)"></div>
+			</div>
+			<div class="point point-4">
+				<div class="dian" style="transform: translate(10px,10px)"></div>
+				<div class="dian" style="transform: translate(50px,10px)"></div>
+				<div class="dian" style="transform: translate(10px,50px)"></div>
+				<div class="dian" style="transform: translate(50px,50px)"></div>
+			</div>
+			<div class="point point-5">
+				<div class="dian" style="transform: translate(10px,10px)"></div>
+				<div class="dian" style="transform: translate(50px,10px)"></div>
+				<div class="dian" style="transform: translate(30px,30px)"></div>
+				<div class="dian" style="transform: translate(10px,50px)"></div>
+				<div class="dian" style="transform: translate(50px,50px)"></div>
+			</div>
+			<div class="point point-6">
+				<div class="dian" style="transform: translate(13px,4px)"></div>
+				<div class="dian" style="transform: translate(47px,4px)"></div>
+				<div class="dian" style="transform: translate(13px,28px)"></div>
+				<div class="dian" style="transform: translate(47px,28px)"></div>
+				<div class="dian" style="transform: translate(13px,52px)"></div>
+				<div class="dian" style="transform: translate(47px,52px)"></div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<div class="btn">START</div>
+	</div>
+	<audio src="http://xmyd.sc.chinaz.com/files/download/sound1/201207/1683.wav" id="myaudio" controls="controls" loop="false" hidden="true"></audio>
+	<script>
+		const a = document.querySelector('.btn');
+		const s = document.querySelector('.shaizi');
+		var myAuto = document.getElementById('myaudio');
+
+		a.addEventListener('click', function () {
+			s.classList.add('ani');
+			myAuto.play();
+			setTimeout(()=>{s.classList.remove('ani');myAuto.pause();},1000);			
+			n = Math.round(Math.random() * 6) + 1;
+			switch (n) {
+				case 1:
+					s.style.transform = `rotateY(-19deg) rotateX(57deg)`;
+					break;
+				case 2:
+					s.style.transform = `rotateY(-19deg) rotateX(147deg) rotateZ(90deg)`;
+					break;
+				case 3:
+					s.style.transform = `rotateY(-19deg) rotateX(327deg)`;
+					break;
+				case 4:
+					s.style.transform = `rotateY(-19deg) rotateX(147deg)`;
+					break;
+				case 5:
+					s.style.transform = `rotateY(-19deg) rotateX(147deg) rotateZ(270deg)`;
+					break;
+				case 6:
+					s.style.transform = `rotateY(-19deg) rotateX(237deg)`;
+					break;
+			}
+		})
+
+
+
+	</script>
+</body>
+
+</html>

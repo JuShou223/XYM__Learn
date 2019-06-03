@@ -1,0 +1,27 @@
+*{
+  margin: 0;padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  height: 336px;
+}  
+.swiper-container .swiper-slide:nth-child(1){
+  background-image: url(https://gss1.bdstatic.com/-vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike116%2C5%2C5%2C116%2C38/sign=2f9db848ebfe9925df01610255c135ba/a9d3fd1f4134970a25fab0a29ecad1c8a6865db5.jpg);
+}
+.swiper-container .swiper-slide:nth-child(2) {
+  background-image: url(https://gss2.bdstatic.com/9fo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike272%2C5%2C5%2C272%2C90/sign=fb0311e8dc43ad4bb2234e92e36b31ca/f703738da9773912912b692cf5198618367ae26a.jpg);
+}
+.swiper-container .swiper-slide:nth-child(3) {
+  background-image: url(http://p1.music.126.net/fmX7z0QVzltoVh24SYHVjw==/109951163941937693.jpg);
+}
+.swiper-container .swiper-slide:nth-child(4) {
+  background-image: url(http://p1.music.126.net/c7UHVwKlkmrgx7Xtk7xM-A==/109951163942005218.jpg);
+}
+.swiper-container .swiper-slide:nth-child(5) {
+  background-image: url(http://p1.music.126.net/1mm9AwV7MGcf1HT5Ugg0Ew==/109951163941936343.jpg);
+}
+.swiper-slide{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

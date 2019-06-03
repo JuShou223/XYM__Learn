@@ -1,0 +1,129 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+  <title>点击查看全文</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      overflow-y: scroll;
+    }
+
+    .wrap {
+      max-height: 200px;
+      /*设置默认高度*/
+      overflow: hidden;
+      position: relative;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    /*展开全文*/
+    .unfold-field {
+      position: absolute;
+      font-size: 0;
+      bottom: 0;
+      width: 100%;
+      height: 124px;
+      z-index: 3;
+    }
+
+    .unfold-field .unflod-field_mask {
+      height: 78px;
+      width: 100%;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, hsla(0, 0%, 100%, 0)), to(#fff));
+      background-image: linear-gradient(-180deg, hsla(0, 0%, 100%, 0), #fff);
+    }
+
+    .unfold-field_text {
+      cursor: pointer;
+      width: 100%;
+      color: #406599;
+      ;
+      height: 46px;
+      font-size: 0px;
+      line-height: 46px;
+      text-align: center;
+      background: #fff;
+    }
+
+    .unfold-field_text span {
+      display: inline-block;
+      font-size: 16px;
+      height: 46px;
+      line-height: 46px;
+    }
+
+    .unfold-field_text span::after {
+      content: "";
+      vertical-align: middle;
+      background: url(http://c1.adline.com.cn/static/img/bottom.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 9px;
+      height: 6px;
+      display: inline-block;
+      margin-left: 5px;
+    }
+  </style>
+</head>
+
+<body>
+      <div class="wrap">
+            <div class="content"> 
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+                          <img src="http://rs.0.gaoshouyou.com/i/fc/9a/3efcc6287c9ab0a3c3eadc723205482d.jpg"
+        width="100%" alt="" />
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+                          <p>本月初，将自家无人驾驶汽车“开”上北京五环的李彦宏受到了媒体群嘲。然而，当媒体还在津津乐道“看互联网大佬如何违规驾驶吃罚单”的时候，百度已经开始享受人工智能带来的投资回报了。</p>
+              </div>
+            <div class="unfold-field">
+                  <div class="unflod-field_mask"></div>
+                  <div class="unfold-field_text"><span>展开全文</span></div>
+              </div> 
+        </div>
+</body>
+<script type="text/javascript">
+  function unfold() {
+    var doc = document;
+    var wrap = doc.querySelector(".wrap");
+    var unfoldField = doc.querySelector(".unfold-field");
+    unfoldField.onclick = function () {
+      this.parentNode.removeChild(this);
+      wrap.style.maxHeight = "100000px";
+    }
+    document.onreadystatechange = function () { //当内容中有图片时，立即获取无法获取到实际高度，需要用 onreadystatechange
+      if (document.readyState === "complete") {
+        var wrapH = doc.querySelector(".wrap").offsetHeight;
+        var contentH = doc.querySelector(".content").offsetHeight;
+        if (contentH <= wrapH) {  // 如果实际高度大于我们设置的默认高度就把超出的部分隐藏。
+          unfoldField.style.display = "none";
+        }
+      }
+    }
+  }
+  unfold();
+
+</script>
+
+</html>

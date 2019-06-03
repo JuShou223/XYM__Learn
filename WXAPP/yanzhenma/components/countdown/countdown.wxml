@@ -1,0 +1,2 @@
+<!--components/countdown/countdown.wxml-->
+<view bindtap="_getCountdownEvent">{{timerText}}{{start?'秒后重试':''}}</view>
