@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>VUE生命周期</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+
+<body>
+  <div id="app" >
+    <input v-model='message' type="text"/>
+    <div class="msg">{{message}}</div>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data() {
+        return {
+          message: '你好'
+        }
+      },
+      beforeCreate() {
+        console.log('before')
+      },
+      created() {
+        console.log('created')
+        let test = document.getElementById('app')
+        console.log(test)
+      },
+      beforeMount() {
+        console.log("beforemount")
+      },
+      mounted() {
+        console.log("mounted")
+      },
+      beforeUpdate() {
+        console.log("beforeUpdate")
+      },
+      updated() {
+        console.log("updated")
+      },
+      beforeDestroy() {
+        console.log("beforeDestory")
+      },
+      destroyed() {
+        console.log("destory")
+      },
+    })
+  </script>
+</body>
+
+</html>
