@@ -7,16 +7,10 @@
     <title>Document</title>
 </head>
 <body>
-    <%= user.name %>
-    <%user.posts.forEach((post)=>{%>
-        <li>
-            <a href="/posts?id=<%= post.id%>">
-                <%= post.title %>
-            </a>
-        </li>
-    <%})%>
-    <a href="/create">
-        发表文章+
-    </a>
+    <form action="/create" method="post">
+        <input type="text" name="title"/>
+        <input type="text" name="content"/>
+        <input type="submit" value="提交"/>
+    </form>
 </body>
 </html>

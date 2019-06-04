@@ -1,5 +1,5 @@
 {
-  "name": "koa",
+  "name": "headless-spider",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,10 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.6.1",
-    "koa": "^2.7.0",
-    "koa-body": "^4.1.0",
-    "koa-router": "^7.4.0",
-    "koa-views": "^6.2.0"
+    "puppeteer": "^1.17.0"
   }
 }
