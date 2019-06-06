@@ -18,7 +18,7 @@
         </i-input>
       </FormItem>
       <FormItem class="Login-no-bottom">
-        <Checkbox v-model="formLogin.remember">记住密码</Checkbox>
+        <Checkbox v-model="formLogin.remember" style="float:left">记住密码</Checkbox>
       </FormItem>
       <FormItem class="Login-no-bottom">
         <Row>
@@ -74,7 +74,7 @@ export default {
         sessionStorage.setItem('user', JSON.stringify(this.formLogin.username))
         if (valid) {
           this.$Message.success('登录成功')
-          this.$router.push({path: '/table'})
+          this.$router.push({path: '/home'})
         } else {
           this.$Message.error('登录失败')
         }
