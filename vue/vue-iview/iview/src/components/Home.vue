@@ -2,20 +2,37 @@
   <div class="layout" :class="{'layout-hide-text': spanLeft < 5}">
     <Row type="flex">
       <i-col :span="spanLeft" class="layout-menu-left">
-        <Menu active-key="1" theme="dark" width="auto">
+        <Menu active-key="1" mode="vertical" theme="dark" width="auto">
           <div class="layout-logo-left" style="color:#eee;line-height:30px">Admin 管理系统</div>
-          <Menu-item key="1">
-            <Icon type="ios-navigate" :size="iconSize"></Icon>
-            <span class="layout-text">选项 1</span>
-          </Menu-item>
-          <Menu-item key="2">
-            <Icon type="ios-keypad" :size="iconSize"></Icon>
-            <span class="layout-text">选项 2</span>
-          </Menu-item>
-          <Menu-item key="3">
-            <Icon type="ios-analytics" :size="iconSize"></Icon>
-            <span class="layout-text">选项 3</span>
-          </Menu-item>
+          <Submenu name="1">
+            <template slot="title">
+              <Icon type="ios-paper"/>导航一
+            </template>
+            <MenuItem name="1-1">文章管理</MenuItem>
+            <MenuItem name="1-2">评论管理</MenuItem>
+            <MenuItem name="1-3">举报管理</MenuItem>
+          </Submenu>
+          <Submenu name="2">
+            <template slot="title">
+              <Icon type="ios-people"/>导航二
+            </template>
+            <MenuItem name="2-1">新增用户</MenuItem>
+            <MenuItem name="2-2">活跃用户</MenuItem>
+          </Submenu>
+          <Submenu name="3">
+            <template slot="title">
+              <Icon type="ios-stats"/>导航三
+            </template>
+            <MenuGroup title="使用">
+              <MenuItem name="3-1">新增和启动</MenuItem>
+              <MenuItem name="3-2">活跃分析</MenuItem>
+              <MenuItem name="3-3">时段分析</MenuItem>
+            </MenuGroup>
+            <MenuGroup title="留存">
+              <MenuItem name="3-4">用户留存</MenuItem>
+              <MenuItem name="3-5">流失用户</MenuItem>
+            </MenuGroup>
+          </Submenu>
         </Menu>
       </i-col>
       <i-col :span="spanRight">
@@ -36,14 +53,12 @@
         </div>
         <div class="layout-breadcrumb">
           <Breadcrumb>
-            <Breadcrumb-item href="#">应用中心</Breadcrumb-item>
-            <Breadcrumb-item href="#">表格</Breadcrumb-item>
+            <Breadcrumb-item to="/home">首页</Breadcrumb-item>
+            <Breadcrumb-item to="/home/manage">components</Breadcrumb-item>
           </Breadcrumb>
         </div>
         <div class="layout-content">
-          <div class="layout-content-main">
-            <i-table border :columns="columns1" :data="data1"></i-table>
-          </div>
+          <router-view></router-view>
           <Page :total="100" style="float:right;margin-right:20px"></Page>
         </div>
       </i-col>
@@ -58,63 +73,7 @@ export default {
     return {
       spanLeft: 5,
       spanRight: 19,
-      userName: '',
-      columns1: [
-        {
-          title: '姓名',
-          key: 'name'
-        },
-        {
-          title: '年龄',
-          key: 'age'
-        },
-        {
-          title: '地址',
-          key: 'address'
-        }
-      ],
-      data1: [
-        {
-          name: '王小明',
-          age: 18,
-          address: '北京市朝阳区芍药居'
-        },
-        {
-          name: '张小刚',
-          age: 25,
-          address: '北京市海淀区西二旗'
-        },
-        {
-          name: '李小红',
-          age: 30,
-          address: '上海市浦东新区世纪大道'
-        },
-        {
-          name: '周小伟',
-          age: 26,
-          address: '深圳市南山区深南大道'
-        },
-        {
-          name: '王小明',
-          age: 18,
-          address: '北京市朝阳区芍药居'
-        },
-        {
-          name: '张小刚',
-          age: 25,
-          address: '北京市海淀区西二旗'
-        },
-        {
-          name: '李小红',
-          age: 30,
-          address: '上海市浦东新区世纪大道'
-        },
-        {
-          name: '周小伟',
-          age: 26,
-          address: '深圳市南山区深南大道'
-        }
-      ]
+      userName: ''
     }
   },
   created () {
@@ -162,9 +121,6 @@ export default {
   overflow: hidden;
   background: #fff;
   border-radius: 4px;
-}
-.layout-content-main {
-  padding: 10px;
 }
 .layout-copy {
   text-align: center;
