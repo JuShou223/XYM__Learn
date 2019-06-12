@@ -1,6 +1,7 @@
 class Router {
     constructor(options){
         this.routes = {}
+        this.init()
         this.bindEvent()
         options.forEach(item => {
             this.route(item.path,()=>{
@@ -8,6 +9,10 @@ class Router {
             })
         })
         console.log(this.routes)
+    }
+    init () {
+        window.addEventListener('load',this.updateView.bind(this),false)
+        window.addEventListener('popstate',this.updateView.bind(this),false)
     }
     route(path,cb){
         this.routes[path] = cb
