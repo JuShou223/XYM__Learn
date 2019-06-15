@@ -23,17 +23,17 @@ export default {
   },
   methods: {
     decreasecart(){
-      if (!event._constructed) {
-        //如果不存在则个属性 则为原生点击事件 不执行下面函数
-        return;
-      }
+      // if (!event._constructed) {
+      //   //如果不存在则个属性 则为原生点击事件 不执行下面函数
+      //   return;
+      // }
       this.food.count--;
     },
     addcart(event) {
-      if (!event._constructed) {
-        //如果不存在则个属性 则为原生点击事件 不执行下面函数
-        return;
-      }
+      // if (!event._constructed) {
+      //   //如果不存在则个属性 则为原生点击事件 不执行下面函数
+      //   return;
+      // }
       if (!this.food.count) {
         console.log(1);
         this.$set(this.food, "count", 1);
