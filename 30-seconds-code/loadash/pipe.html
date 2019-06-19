@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.bootcss.com/underscore.js/1.9.1/underscore-min.js"></script>    
+    <script>
+        // string 
+        // 1. 转为小写
+        const tolowercase = (str) => str.toLowerCase()
+        // 2. 拼接一个字符串
+        const add = str => `${str} hello world`
+        // 3. 拆开为一个数组
+        const splitStr = str => str.split(' ')
+        // 函数式编程
+        // 组合
+        function compose(...fns) {
+            return fns.reduce((prev,next)=>{
+                return (...arg) => prev(next(...arg))
+            })
+        }
+        const combineFun = compose(splitStr,add,tolowercase)
+        console.log(combineFun('HEXO'))
+        // 管道
+        function pipe(...fns) {
+            return fns.reduce((prev,next)=>{
+                return (...arg) => next(prev(...arg))
+            })
+        }
+        
+        const pipeFun = pipe(tolowercase,add,splitStr)
+        console.log(pipeFun('HEXO'))
+    </script>
+</body>
+</html>
