@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "josn-server",
+      "author": "typicode"
+    },
+    {
+      "categoryId": "1872",
+      "page": "1",
+      "pageSize": "1",
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postid": 1
+    },
+    {
+      "body": "最美不过下雨天",
+      "postid": "1",
+      "id": 2
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
