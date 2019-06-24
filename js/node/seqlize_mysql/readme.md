@@ -5,6 +5,7 @@
     sequelize 命令行工具
 
 -config
+ npm i hapi@16 mysql2 sequelize env2
 yarn add mysql2 sequelize sequelize-cli
 ./node_modules/.bin/sequelize init
 ./node_modules/.bin/sequelize db:create

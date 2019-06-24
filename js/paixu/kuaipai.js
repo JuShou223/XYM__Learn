@@ -13,7 +13,8 @@ function quickSort(arr, begin, end) {
         //左指针从左向右扫描，碰到第一个大于基准数的时候停住
         while(l < r && arr[l] <= temp)
           l ++;
-        //交换左右指针所停位置的数
+        //交换左右指针所停位置的数;
+        console.log(l,r,'##')
         [arr[l], arr[r]] = [arr[r], arr[l]];
         // console.log(arr);
     }
