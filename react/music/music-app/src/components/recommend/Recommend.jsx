@@ -98,6 +98,8 @@ class Recommend extends Component {
       </>
     )
   }
+  showPlayer=()=>{}
+  
   render() {
     const { refreshScroll } = this.state
     const { match } = this.props
@@ -120,7 +122,7 @@ class Recommend extends Component {
             </div>
           </div>
         </Scroll>
-        <Loading title='正在加载...' show={this.state.show}></Loading>
+        <Loading title='正在加载...' show={this.state.show} showMiniPlayer={this.showPlayer}></Loading>
         <Route path={`${match.url}/:id`} component={Album}></Route>
       </div>
     );

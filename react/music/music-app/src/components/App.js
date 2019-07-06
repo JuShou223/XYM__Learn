@@ -9,13 +9,18 @@ import Search from './search/Search';
 import './App.styl';
 import '../assets/stylus/reset.styl'
 import '../assets/stylus/font.styl'
+import Player from '../containers/Player'
+import logo from '../assets/imgs/logo.png'
 
 function App() {
   return (
     <Router>
       <div className="app">
         <header className="app-header">
-          header
+          <img className="app-logo" src={logo} width="100%" height="100%" alt=""/>
+          <div className="app-title">
+            芒果音乐
+          </div>
         </header>
         <div className="music-tab">
           <div className="tab-item">
@@ -44,6 +49,7 @@ function App() {
             <Redirect from="/" to="/recommend" />
           </Switch>
         </div>
+        <Player></Player>
       </div>
     </Router>
   );
