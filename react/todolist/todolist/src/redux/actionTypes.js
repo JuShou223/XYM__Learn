@@ -1,0 +1,2 @@
+export const ADDTODOLIST = "ADD_TODOLIST"
+export const TOGGLETODOLIST = "TOGGLE_TODOLIST"
