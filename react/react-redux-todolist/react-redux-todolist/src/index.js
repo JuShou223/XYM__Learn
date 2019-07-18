@@ -10,6 +10,7 @@ const store = createStore(reducer);
 console.log('store', store.getState());
 ReactDOM.render(
   <Provider store={store}>
+    {console.log(store)}
     <App />
   </Provider>
   , document.getElementById('root'));

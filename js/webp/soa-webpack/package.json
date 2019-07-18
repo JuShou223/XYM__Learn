@@ -1,0 +1,17 @@
+{
+  "name": "soa-webpack",
+  "version": "1.0.0",
+  "description": "three shaking\r 没用到的代码 不会被打包",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        let a = {
+            user: '徐帅哥',
+            fn: function (e,m) {
+                console.log(this.user)
+                console.log(e+m)
+            }
+        }
+        let b = a.fn
+        // b.apply(a,[2,4])
+        // b.call(a,2,4)
+        // let c = b.bind(a)
+        // c()
+        b.bind(a)(5,4)
+    </script> -->
+    <script>
+        Function.prototype._call = function(){
+            console.log(this)
+            let [thisArg,...args] = [...arguments]
+            console.log(thisArg)
+            if(!thisArg){
+                thisArg = typeof window === 'undefined' ? global : window
+            }
+            // this的指向是当前函数 function
+            thisArg.func = this;
+            // 执行函数
+            let result = thisArg.func(...args)
+            // thisArgs上并没有func属性
+            delete thisArg.func
+            return result
+        }
+        let a = {
+            user: '徐帅哥',
+            fn: function (e,m) {
+                console.log(this.user)
+                // console.log(e+m)
+            },
+            fn2: function (e) {
+                console.log(this.user)
+                // console.log(e+m)
+            }
+        }
+        let b =a.fn2
+        b._call(a)
+    </script>
+</body>
+</html>

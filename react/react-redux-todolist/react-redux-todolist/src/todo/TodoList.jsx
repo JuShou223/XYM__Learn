@@ -4,10 +4,12 @@ class TodoList extends Component {
   state = {  }
   render() { 
     const { todos, toggleTo} = this.props;
+    console.log(todos)
     return (
       <div>
         {
           todos.map((todo, i) =>{
+            console.log(todo)
             return (
               <li key={i} onClick={()=>{toggleTo(todo.id)}} style={{textDecoration: todo.completed ? 'line-through' : '',cursor:'pointer'}}>{todo.text}</li>
             )
