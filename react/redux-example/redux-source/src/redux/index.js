@@ -1,11 +1,14 @@
 
 import  createStore from "./createStore";
-import combineReducers from './combineReducer'
+import combineReducers from './combineReducer';
+// import ReduxThunk from 'redux-thunk';
+import applyMiddleware from './applyMiddleWare'
 export {
     createStore,
-    combineReducers
+    combineReducers,
+    // ReduxThunk
     // bindActionCreators,
-    // applyMiddleware,
+    applyMiddleware,
     // compose,
     // __DO_NOT_USE__ActionTypes
   }

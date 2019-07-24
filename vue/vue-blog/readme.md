@@ -9,6 +9,20 @@ mvc controller => model => controller =>　html => http response
 生命周期 异步数据 页面运行 
 mvvm webpack => .js => render => root (JS DOM)
 加载的过程
+
+- nuxt 配置
+nuxt.config.js
+layout SEO
+plugins
+
+
+
+
+
+
+
+
+
 asyncData
 
 

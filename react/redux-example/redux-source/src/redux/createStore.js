@@ -1,4 +1,9 @@
-const createStore = (reducer,preloadState) => {
+const createStore = (reducer,preloadState, enhancer) => {
+    if(typeof preloadState === 'function' && enhancer === undefined){
+        enhancer = preloadState;
+        preloadState = undefined;
+    }
+    
     let store = preloadState;
     const listener =[]; //监听者
     const subscribe = (listen)=> listener.push(listen) //订阅发布者
